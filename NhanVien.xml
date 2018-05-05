@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nhanvien>
+<Member Id = "NV0001" Name="nguyen van a" Ngaysinh="2018-1-1" User="admin1" Pass="admin1" Diachi="123 vung tau" Sdt="090000001" Level="1"/>
+<Member Id = "NV0002" Name="nguyen van b" Ngaysinh="2018-1-1" User="admin2" Pass="admin2" Diachi="132 vung tau" Sdt="090050001" Level="1"/>
+<Member Id = "NV0003" Name="nguyen van c" Ngaysinh="2018-1-1" User="admin3" Pass="admin3" Diachi="543 vung tau" Sdt="090000001" Level="1"/>
+<Member Id = "NV0004" Name="nguyen van d" Ngaysinh="2018-1-1" User="admin4" Pass="admin4" Diachi="1663 vung tau" Sdt="090004001" Level="1"/>
+<Member Id = "NV0005" Name="nguyen van e" Ngaysinh="2018-1-1" User="admin5" Pass="admin5" Diachi="165 vung tau" Sdt="090000001" Level="1"/>
+<Member Id = "NV0006" Name="nguyen van f" Ngaysinh="2018-1-1" User="admin6" Pass="admin6" Diachi="177 vung tau" Sdt="0900320001" Level="1"/>
+
+</Nhanvien>

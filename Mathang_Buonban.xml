@@ -4,7 +4,7 @@
 <Cua_hang Ma_so="PET" Ten="Cửa hàng thức ăn nhanh"/>
 <Danh_sach_hang>
 <!-- xml lưu về đồ uống nóng -->
-<hang ten ="Hot Matcha Latte" Ma_so = "hang_1" Don_gia_ban = "55000"  Doanh_thu="550000" Trang_thai_Con_hang="true">
+<hang Ten ="Hot Matcha Latte" Ma_so = "DUN_1" Don_gia_ban = "55000"  Doanh_thu="550000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongnong" Ma_so="DOUONGNONG"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
@@ -12,7 +12,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
 </Danh_sach_hang>
-<hang ten ="Hot Tea" Ma_so = "hang_2" Don_gia_ban = "30000"  Doanh_thu="300000" Trang_thai_Con_hang="true">
+<hang Ten ="Hot Tea" Ma_so = "DUN_2" Don_gia_ban = "30000"  Doanh_thu="300000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongnong" Ma_so="DOUONGNONG"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
@@ -20,7 +20,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
 </Danh_sach_hang>
-<hang ten ="Hot Chocolate" Ma_so = "hang_3" Don_gia_ban = "40000"  Doanh_thu="400000" Trang_thai_Con_hang="true">
+<hang Ten ="Hot Chocolate" Ma_so = "DUN_3" Don_gia_ban = "40000"  Doanh_thu="400000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongnong" Ma_so="DOUONGNONG"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="2" Tien="80000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="2" Tien="80000"/>
@@ -29,7 +29,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="2" Tien="80000"/>
 </Danh_sach_hang>
 <!-- xml lưu về đồ uống đá -->
-<hang ten ="Ice Matcha Latte " Ma_so = "hang_4" Don_gia_ban = "65000"  Doanh_thu="325000" Trang_thai_Con_hang="true">
+<hang Ten ="Ice Matcha Latte " Ma_so = "hang_4" Don_gia_ban = "65000"  Doanh_thu="325000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongda" Ma_so="DOUONGDA"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
@@ -37,7 +37,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
 </Danh_sach_hang>
-<hang ten ="Vietnamese Coffee Iced" Ma_so = "hang_5" Don_gia_ban = "30000"  Doanh_thu="300000" Trang_thai_Con_hang="true">
+<hang Ten ="Vietnamese Coffee Iced" Ma_so = "hang_5" Don_gia_ban = "30000"  Doanh_thu="300000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongda" Ma_so="DOUONGDA"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
@@ -45,7 +45,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
 </Danh_sach_hang>
-<hang ten ="Iced Americano" Ma_so = "hang_6" Don_gia_ban = "45000"  Doanh_thu="450000" Trang_thai_Con_hang="true">
+<hang Ten ="Iced Americano" Ma_so = "hang_6" Don_gia_ban = "45000"  Doanh_thu="450000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongda" Ma_so="DOUONGDA"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
@@ -54,7 +54,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
 </Danh_sach_hang>
 <!-- xml lưu về đồ uống đá xay -->
-<hang ten ="Matcha Frappe" Ma_so = "hang_7" Don_gia_ban = "75000"  Doanh_thu="750000" Trang_thai_Con_hang="true">
+<hang Ten ="Matcha Frappe" Ma_so = "hang_7" Don_gia_ban = "75000"  Doanh_thu="750000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongdaxay" Ma_so="DOUONGDAXAY"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
@@ -62,7 +62,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
 </Danh_sach_hang>
-<hang ten ="Paslon Frult Chiller" Ma_so = "hang_8" Don_gia_ban = "65000"  Doanh_thu="650000" Trang_thai_Con_hang="true">
+<hang Ten ="Paslon Frult Chiller" Ma_so = "hang_8" Don_gia_ban = "65000"  Doanh_thu="650000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongdaxay" Ma_so="DOUONGDAXAY"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
@@ -70,7 +70,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
 </Danh_sach_hang>
-<hang ten ="Iced Americano" Ma_so = "hang_9" Don_gia_ban = "65000"  Doanh_thu="650000" Trang_thai_Con_hang="true">
+<hang Ten ="Iced Americano" Ma_so = "hang_9" Don_gia_ban = "65000"  Doanh_thu="650000" Trangthai_conhang="true">
     <Nhom_hang Ten="douongdaxay" Ma_so="DOUONGDAXAY"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
@@ -79,7 +79,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
 </Danh_sach_hang>
 <!-- xml lưu về thức ăn nhẹ -->
-<hang ten ="Yogurt Lemon Cheesecake" Ma_so = "hang_10" Don_gia_ban = "35000"  Doanh_thu="350000" Trang_thai_Con_hang="true">
+<hang Ten ="Yogurt Lemon Cheesecake" Ma_so = "hang_10" Don_gia_ban = "35000"  Doanh_thu="350000" Trangthai_conhang="true">
     <Nhom_hang Ten="thucan" Ma_so="THUCAN"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
@@ -87,7 +87,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
 </Danh_sach_hang>
-<hang ten ="Coconut Macaroon_1" Ma_so = "hang_11" Don_gia_ban = "15000"  Doanh_thu="150000" Trang_thai_Con_hang="true">
+<hang Ten ="Coconut Macaroon_1" Ma_so = "hang_11" Don_gia_ban = "15000"  Doanh_thu="150000" Trangthai_conhang="true">
     <Nhom_hang Ten="thucan" Ma_so="THUCAN"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
@@ -95,7 +95,7 @@
     <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
 </Danh_sach_hang>
-<hang ten ="Coconut Macaroon_2" Ma_so = "hang_12" Don_gia_ban = "25000"  Doanh_thu="250000" Trang_thai_Con_hang="true">
+<hang Ten ="Coconut Macaroon_2" Ma_so = "hang_12" Don_gia_ban = "25000"  Doanh_thu="250000" Trangthai_conhang="true">
     <Nhom_hang Ten="thucan" Ma_so="THUCAN"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="25000" So_luong="2" Tien="50000"/>
     <Ban_hang Ngay="2017-3-6" Don_gia="25000" So_luong="2" Tien="50000"/>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Du_lieu>
+<Cua_hang Ma_so="PET" Ten="Cửa hàng thức ăn nhanh"/>
+<Danh_sach_hang>
+<!-- xml lưu về đồ uống nóng -->
+<hang Ten ="Canh ga" Ma_so = "nl_1" Don_gia_nhap = "10000" Trangthai_conhang="true">
+    <Nhom_hang Ten="nguyenlieutuoi" Ma_so="NGUYENLIEUTUOI"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+</Danh_sach_hang>
+
+<hang Ten ="Duoi ga" Ma_so = "nl_2" Don_gia_nhap = "10000" Trangthai_conhang="true">
+    <Nhom_hang Ten="nguyenlieutuoi" Ma_so="NGUYENLIEUTUOI"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+</Danh_sach_hang>
+
+<hang Ten ="Uc ga" Ma_so = "nl_3" Don_gia_nhap = "10000" Trangthai_conhang="true">
+    <Nhom_hang Ten="nguyenlieutuoi" Ma_so="NGUYENLIEUTUOI"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="10000" So_luong="2" Tien="20000"/>
+</Danh_sach_hang>
+
+<hang Ten ="Bot chien gon" Ma_so = "nl_4" Don_gia_nhap = "20000" Trangthai_conhang="true">
+    <Nhom_hang Ten="nguyenlieukho" Ma_so="NGUYENKIEUKHO"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+</Danh_sach_hang>
+
+<hang Ten ="Bot chien xu" Ma_so = "nl_5" Don_gia_nhap = "20000" Trangthai_conhang="true">
+    <Nhom_hang Ten="nguyenlieukho" Ma_so="NGUYENKIEUKHO"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="2" Tien="40000"/>
+</Danh_sach_hang>
+
+<hang Ten ="Tuong ot" Ma_so = "nl_6" Don_gia_nhap = "15000" Trangthai_conhang="true">
+    <Nhom_hang Ten="nguyenlieukho" Ma_so="NGUYENKIEUKHO"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+</Danh_sach_hang>
+
+</Cua_hang>
+</Du_lieu>

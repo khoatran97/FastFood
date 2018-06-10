@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml lưu về thông tin hàng hóa -->
+<Du_lieu>
+<Cua_hang Ma_so="XML" Ten="Cửa hàng thức ăn nhanh"/>
+<Danh_sach_hang>
+<!-- xml lưu về đồ uống nóng -->
+<Hang Ten ="Hot Matcha Latte" Ma_so = "MT_1" Don_gia_ban = "55000"  Doanh_thu="550000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongnong" Ma_so="DOUONGNONG"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<Hang Ten ="Hot Tea" Ma_so = "MT_2" Don_gia_ban = "30000"  Doanh_thu="300000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongnong" Ma_so="DOUONGNONG"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<Hang Ten ="Hot Chocolate" Ma_so = "MT_3" Don_gia_ban = "40000"  Doanh_thu="400000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongnong" Ma_so="DOUONGNONG"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="2" Tien="80000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="2" Tien="80000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="2" Tien="80000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="2" Tien="80000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="2" Tien="80000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<!-- xml lưu về đồ uống đá -->
+<Hang Ten ="Ice Matcha Latte " Ma_so = "MT_4" Don_gia_ban = "65000"  Doanh_thu="650000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongda" Ma_so="DOUONGDA"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="60000" So_luong="5" Tien="300000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="60000" So_luong="5" Tien="300000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="60000" So_luong="5" Tien="300000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="60000" So_luong="5" Tien="300000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="60000" So_luong="5" Tien="300000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<Hang Ten ="Vietnamese Coffee Iced" Ma_so = "MT_5" Don_gia_ban = "30000"  Doanh_thu="300000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongda" Ma_so="DOUONGDA"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<Hang Ten ="Iced Americano" Ma_so = "MT_6" Don_gia_ban = "45000"  Doanh_thu="450000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongda" Ma_so="DOUONGDA"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<!-- xml lưu về đồ uống đá xay -->
+<Hang Ten ="Matcha Frappe" Ma_so = "MT_7" Don_gia_ban = "75000"  Doanh_thu="750000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongdaxay" Ma_so="DOUONGDAXAY"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<Hang Ten ="Paslon Frult Chiller" Ma_so = "MT_8" Don_gia_ban = "65000"  Doanh_thu="650000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongdaxay" Ma_so="DOUONGDAXAY"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<Hang Ten ="Iced Americano" Ma_so = "MT_9" Don_gia_ban = "65000"  Doanh_thu="650000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongdaxay" Ma_so="DOUONGDAXAY"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="55000" So_luong="5" Tien="110000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="55000" So_luong="5" Tien="110000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="55000" So_luong="5" Tien="110000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="55000" So_luong="5" Tien="110000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="55000" So_luong="5" Tien="110000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<!-- xml lưu về thức ăn nhẹ -->
+<Hang Ten ="Yogurt Lemon Cheesecake" Ma_so = "MT_10" Don_gia_ban = "35000"  Doanh_thu="350000"  So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="thucanvat" Ma_so="THUCANVAT"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<Hang Ten ="Coconut Macaroon_1" Ma_so = "MT_11" Don_gia_ban = "15000"  Doanh_thu="150000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="thucanvat" Ma_so="THUCANVAT"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="15000" So_luong="2" Tien="30000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="10000" So_luong="5" Tien="50000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="10000" So_luong="5" Tien="50000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="10000" So_luong="5" Tien="50000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="10000" So_luong="5" Tien="50000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="10000" So_luong="5" Tien="50000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+<Hang Ten ="Coconut Macaroon_2" Ma_so = "MT_12" Don_gia_ban = "25000"  Doanh_thu="250000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="thucanvat" Ma_so="THUCANVAT"/>
+    <Danh_sach_ban_hang>
+    <Ban_hang Ngay="2017-3-6" Don_gia="25000" So_luong="2" Tien="50000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="25000" So_luong="2" Tien="50000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="25000" So_luong="2" Tien="50000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="25000" So_luong="2" Tien="50000"/>
+    <Ban_hang Ngay="2017-3-6" Don_gia="25000" So_luong="2" Tien="50000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    <Nhap_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    </Danh_sach_nhap_hang>
+</Danh_sach_hang>
+</Cua_hang>
+</Du_lieu>

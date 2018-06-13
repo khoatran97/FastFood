@@ -1,0 +1,17 @@
+<Mon Ten ="Iced Americano" Ma_so = "6" Don_gia_ban = "45000" Doanh_thu="450000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="douongda" Ma_so="DOUONGDA"/>
+    <Danh_sach_ban_hang>
+        <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="5" Tien="150000"/>
+    </Danh_sach_nhap_hang>
+</Mon>

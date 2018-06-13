@@ -1,0 +1,16 @@
+<Mon Ten ="Hot Matcha Latte" Ma_so = "1" Don_gia_ban = "55000" Doanh_thu="550000" So_luong_ton ="15" Trangthai_conhang="true">
+    <Danh_sach_ban_hang>
+        <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+        <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="40000" So_luong="5" Tien="200000"/>
+    </Danh_sach_nhap_hang>
+</Mon>

@@ -1,0 +1,17 @@
+<Mon Ten ="Yogurt Lemon Cheesecake" Ma_so = "MT_10" Don_gia_ban = "35000" Doanh_thu="350000"  So_luong_ton ="15" Trangthai_conhang="true">
+    <Nhom_hang Ten="thucanvat" Ma_so="THUCANVAT"/>
+    <Danh_sach_ban_hang>
+        <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="35000" So_luong="2" Tien="70000"/>
+    </Danh_sach_ban_hang>
+    <Danh_sach_nhap_hang>
+        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
+    </Danh_sach_nhap_hang>
+</Monß>

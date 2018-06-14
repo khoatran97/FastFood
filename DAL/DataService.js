@@ -21,7 +21,7 @@ app.createServer((req, res) => {
             var getMethod = require('./Service/GetMethod');
 
             switch (req.url) {
-                case '/CuaHang':
+                case '/LoadStore':
                     if (true) {
                         res.writeHead(200, {
                             'Content-Type': 'text/xml'
@@ -35,7 +35,7 @@ app.createServer((req, res) => {
                         res.end("Request was not support!!!")
                     }
                     break;
-                case '/ThucDon':
+                case '/LoadMenu':
                     if (true) {
                         res.writeHead(200, {
                             'Content-Type': 'text/xml'
@@ -56,6 +56,6 @@ app.createServer((req, res) => {
     if (err != null) {
         console.log('ERROR: ', err);
     } else {
-        console.log('Server is listening at port 3000');
+        console.log('Data Service is listening at port 3000');
     }
 })

@@ -6,8 +6,6 @@ var menuPath = path.join(__dirname, '/../Data/Menu/');
 var storePath = path.join(__dirname, '/../Data/Store/');
 var userPath = path.join(__dirname, '/../Data/User/');
 
-var MenuItems = [];
-
 module.exports.loadAllStore = () => {
     var data = fs.readFileSync(storePath + 'Stores.xml', 'utf-8');
     return data;
@@ -19,14 +17,16 @@ module.exports.loadAllUser = () => {
 }
 
 module.exports.loadAllMenuItem = () => {
-    fs.readdirSync(menuPath + 'McCafes/').forEach(file => {
-        var filePath = menuPath + '/McCafes/' + file;
+    var MenuItems = [];
+    fs.readdirSync(menuPath).forEach(file => {
+        var filePath = menuPath + file;
         var data = fs.readFileSync(filePath, 'utf-8')
 
         var parser = new xml2js.Parser();
         parser.parseString(data, function (err, result) {
-            if (result != null)
+            if (result != null){
                 MenuItems.push(result);
+            }
         });
     });
 

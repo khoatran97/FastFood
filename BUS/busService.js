@@ -7,59 +7,74 @@ var dataHandle = require('./dataHandle');
 var port = 3001
 
 app.createServer((req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    console.log(`${req.method} ${req.url}`);
-    switch (req.method) {
-        case 'GET':
-            switch (req.url) {
-                case '/LoadUser':
-                    res.writeHead(200, {
-                        'Content-Type': 'text/xml'
-                    });
-                    res.end(dataHandle.User.GetAll());
-                    break;
-                case '/LoadStore':
-                    app.get('http://localhost:3000/LoadStore', (resp) => {
-                        let data = '';
-                        resp.on('data', (chunk) => {
-                            data += chunk;
+    let body='';
+    req.on('data', (chunk) => {
+        body += chunk.toString();
+    }).on('end', () => {
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        console.log(`${req.method} ${req.url}`);
+        switch (req.method) {
+            case 'GET':
+                switch (req.url) {
+                    case '/LoadUser':
+                        res.writeHead(200, {
+                            'Content-Type': 'text/xml'
                         });
-                        resp.on('end', () => {
-                            res.writeHead(200, {
-                                'Content-Type': 'text/xml'
+                        res.end(dataHandle.User.GetAll());
+                        break;
+                    case '/LoadStore':
+                        app.get('http://localhost:3000/LoadStore', (resp) => {
+                            let data = '';
+                            resp.on('data', (chunk) => {
+                                data += chunk;
                             });
-                            res.end(data);
-                        });
-                    }).on("error", (err) => {
-                        res.writeHeader(404, {
-                            'Content-Type': 'text/plain'
-                        })
-                        res.end("Error: " + err.message);
-                    });
-                    break;
-                case '/LoadMenu':
-                    app.get('http://localhost:3000/LoadMenu', (resp) => {
-                        let data = '';
-                        resp.on('data', (chunk) => {
-                            data += chunk;
-                        });
-                        resp.on('end', () => {
-                            res.writeHead(200, {
-                                'Content-Type': 'text/xml'
+                            resp.on('end', () => {
+                                res.writeHead(200, {
+                                    'Content-Type': 'text/xml'
+                                });
+                                res.end(data);
                             });
-                            res.end(data);
+                        }).on("error", (err) => {
+                            res.writeHeader(404, {
+                                'Content-Type': 'text/plain'
+                            })
+                            res.end("Error: " + err.message);
                         });
-                    }).on("error", (err) => {
-                        res.writeHeader(404, {
-                            'Content-Type': 'text/plain'
+                        break;
+                    case '/LoadMenu':
+                        res.writeHead(200, {
+                            'Content-Type': 'text/xml'
+                        });
+                        if (req.headers['role'] == 0) {
+                            res.end(dataHandle.Menu.GetAllInGuest());
+                        }
+                        break;
+                }
+                break;
+            case 'PUT':
+                switch (req.url) {
+                    case '/UpdateMenu':
+                        dataHandle.Menu.Update(body).then((result) => {
+                            res.end('Done');
+                        }).catch((reject) => {
+                            res.end('Fail');
                         })
-                        res.end("Error: " + err.message);
-                    });
-                    break;
-            }
-            break;
-    }
-
+                        break;
+                }
+                break;
+            case 'POST':
+                switch (req.url) {
+                    case '/InsertMenu':
+                        dataHandle.Menu.Insert(body).then((result) => {
+                            res.end('Done');
+                        }).catch((reject) => {
+                            res.end('Fail');
+                        })
+                        break;
+                }
+                break;
+        }
+    });
 }).listen(port, (err) => {
     if (err != null)
         console.log('==> Error: ' + err)

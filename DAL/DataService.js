@@ -1,5 +1,8 @@
 var app = require('http');
 var url = require('url');
+var Cache = require('./Cache');
+
+var Data = Cache.CacheData;
 
 var session = [];
 
@@ -20,15 +23,13 @@ app.createServer((req, res) => {
     switch (req.method) {
         case 'GET':
             var getMethod = require('./Service/GetMethod');
-
             switch (req.url) {
                 case '/LoadStore':
                     if (true) {
                         res.writeHead(200, {
                             'Content-Type': 'text/xml'
                         });
-                        var data = getMethod.loadAllStore();
-                        res.end(data);
+                        res.end(Data.Store());
                     } else {
                         res.writeHeader(404, {
                             'Content-Type': 'text/plain'
@@ -41,10 +42,9 @@ app.createServer((req, res) => {
                         res.writeHead(200, {
                             'Content-Type': 'text/xml'
                         });
-                        var data = getMethod.loadAllMenuItem();
-                        res.end(data);
+                        res.end(Data.Menu());
                     } else {
-                        res.writeHeader(404, {
+                        res.writeHead(404, {
                             'Content-Type': 'text/plain'
                         })
                         res.end("Request was not support!!!")
@@ -55,14 +55,51 @@ app.createServer((req, res) => {
                         res.writeHead(200, {
                             'Content-Type': 'text/xml'
                         });
-                        var data = getMethod.loadAllUser();
-                        res.end(data);
+                        res.end(Data.User());
                     } else {
-                        res.writeHeader(404, {
+                        res.writeHead(404, {
                             'Content-Type': 'text/plain'
                         })
                         res.end("Request was not support!!!")
                     }
+                    break;
+            }
+            break;
+        case 'PUT':
+            var putMethod = require('./Service/PutMethod');
+            switch (req.url) {
+                case '/UpdateMenu':
+                    let body = '';
+                    req.on('data', chunk => {
+                        body += chunk.toString();
+                    });
+                    req.on('end', () => {
+                        putMethod.UpdateMenuItem(body).then((result) => {
+                            Data.CacheMenu();
+                            res.end("Done");
+                        }).catch((err) => {
+                            res.end("Fail");
+                        })
+                    });
+                    break;
+            }
+            break;
+        case 'POST':
+            var postMethod = require('./Service/PostMethod');
+            switch (req.url) {
+                case '/InsertMenu':
+                    let body = '';
+                    req.on('data', chunk => {
+                        body += chunk.toString();
+                    });
+                    req.on('end', () => {
+                        postMethod.InsertMenuItem(body).then((result) => {
+                            Data.CacheMenu();
+                            res.end("Done");
+                        }).catch((err) => {
+                            res.end("Fail");
+                        })
+                    });
                     break;
             }
             break;

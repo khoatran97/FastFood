@@ -26,10 +26,9 @@ module.exports.loadAllMenuItem = () => {
         var parser = new xml2js.Parser();
         parser.parseString(data, function (err, result) {
             if (result != null)
-                MenuItems.push({'Item': result.Mon.$});
+                MenuItems.push(result);
         });
     });
-    console.log(MenuItems);
 
     var builder = new xml2js.Builder();
     var xml = builder.buildObject(MenuItems)

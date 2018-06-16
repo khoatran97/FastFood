@@ -14,6 +14,7 @@ function checkAuth(headers) {
 }
 
 app.createServer((req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3001");
     console.log(`${req.method} ${req.url}`);
 
     switch (req.method) {
@@ -41,6 +42,20 @@ app.createServer((req, res) => {
                             'Content-Type': 'text/xml'
                         });
                         var data = getMethod.loadAllMenuItem();
+                        res.end(data);
+                    } else {
+                        res.writeHeader(404, {
+                            'Content-Type': 'text/plain'
+                        })
+                        res.end("Request was not support!!!")
+                    }
+                    break;
+                case '/LoadUser':
+                    if (true) {
+                        res.writeHead(200, {
+                            'Content-Type': 'text/xml'
+                        });
+                        var data = getMethod.loadAllUser();
                         res.end(data);
                     } else {
                         res.writeHeader(404, {

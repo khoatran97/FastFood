@@ -1,4 +1,4 @@
-<Mon Ten ="Paslon Frult Chiller" Ma_so = "8" Don_gia = "65000" Doanh_thu="650000" So_luong_ton ="15" Tinh_trang="true">
+<Mon Ten ="Paslon Frult Chiller" Ma_so = "MT_8" Don_gia = "65000" Doanh_thu="650000" So_luong_ton ="15" Tinh_trang="true">
     <Danh_sach_ban_hang>
         <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
         <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>

@@ -7,11 +7,15 @@ var dataHandle = require('./dataHandle');
 var port = 3001
 
 app.createServer((req, res) => {
+  
     let body='';
     req.on('data', (chunk) => {
         body += chunk.toString();
     }).on('end', () => {
-        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader('Access-Control-Allow-Origin',' *');
+
+      //Check the petition Method
+    
         console.log(`${req.method} ${req.url}`);
         switch (req.method) {
             case 'GET':
@@ -42,11 +46,21 @@ app.createServer((req, res) => {
                         });
                         break;
                     case '/LoadMenu':
+                        /// ở đây bỏ rồi xuống dưới đi
                         res.writeHead(200, {
                             'Content-Type': 'text/xml'
                         });
-                        if (req.headers['role'] == 0) {
+                        if (true) {
                             res.end(dataHandle.Menu.GetAllInGuest());
+                        }
+                        break;
+                    case '/LoadMenu2':
+                        /// ở đây bỏ rồi xuống dưới đi
+                        res.writeHead(200, {
+                            'Content-Type': 'text/xml'
+                        });
+                        if (true) {
+                            res.end(dataHandle.Menu.GetAllInEmplyee());
                         }
                         break;
                 }
@@ -73,6 +87,8 @@ app.createServer((req, res) => {
                         break;
                 }
                 break;
+
+               
         }
     });
 }).listen(port, (err) => {

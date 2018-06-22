@@ -77,6 +77,18 @@ module.exports.CacheData = new class Cache {
         }
     }
 
+    User() {
+        if (this.userCache == "" || this.userCache == undefined) {
+            this.CacheUser().then(result => {
+                this.userCache = result;
+                return this.userCache;
+            })
+        }
+        else {
+            return this.userCache;
+        }
+    }
+
     Store() {
         if (this.storeCache == "" || this.storeCache == undefined) {
             this.CacheStore().then(result => {

@@ -1,4 +1,4 @@
-<Mon Ten="Hot Matcha Latte" Ma_so="1" Don_gia="2222" Doanh_thu="550000" So_luong_ton="15" Tinh_trang="false">
+<Mon Ten="Hot Matcha Latte" Ma_so="MT_1" Don_gia="2222" Doanh_thu="550000" So_luong_ton="15" Tinh_trang="false" >
     <Danh_sach_ban_hang>
         <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>
         <Ban_hang Ngay="2017-3-6" Don_gia="55000" So_luong="2" Tien="110000"/>

@@ -32,10 +32,28 @@ class Menu {
     }
 
     GetAllInGuest() {
+        // tại đây có thay đổi cấu trúc dữ liệu .......
+        ///
         var menuItems = [];
         xml2js.Parser().parseString(Data.Menu(), (err, result) =>{
             (result.root.Mon).forEach(item => {
-                menuItems.push({'Mon': item.$});
+                
+               // load dữ liệu để hiển thị
+               menuItems.push({'Mon': item.$});
+            });
+        });
+        var builder = new xml2js.Builder();
+        return builder.buildObject(menuItems)
+    }
+
+    GetAllInEmplyee() {
+        // tại đây có thay đổi cấu trúc dữ liệu .......
+        ///
+        var menuItems = [];
+        xml2js.Parser().parseString(Data.Menu(), (err, result) =>{
+            (result.root.Mon).forEach(item => {
+               // load dữ liệu để hiển thị
+               menuItems.push({'Mon': item});
             });
         });
         var builder = new xml2js.Builder();

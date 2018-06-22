@@ -1,4 +1,4 @@
-<Mon Ten ="Iced Americano" Ma_so = "6" Don_gia = "45000" Doanh_thu="450000" So_luong_ton ="15" Tinh_trang="true">
+<Mon Ten ="Iced Americano" Ma_so = "MT_6" Don_gia = "45000" Doanh_thu="450000" So_luong_ton ="15" Tinh_trang="true">
     <Danh_sach_ban_hang>
         <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>
         <Ban_hang Ngay="2017-3-6" Don_gia="45000" So_luong="2" Tien="90000"/>

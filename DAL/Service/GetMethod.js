@@ -21,7 +21,6 @@ module.exports.loadAllMenuItem = () => {
     fs.readdirSync(menuPath).forEach(file => {
         var filePath = menuPath + file;
         var data = fs.readFileSync(filePath, 'utf-8')
-
         var parser = new xml2js.Parser();
         parser.parseString(data, function (err, result) {
             if (result != null){
@@ -32,6 +31,6 @@ module.exports.loadAllMenuItem = () => {
 
     var builder = new xml2js.Builder();
     var xml = builder.buildObject(MenuItems)
-
+    
     return xml;
 }

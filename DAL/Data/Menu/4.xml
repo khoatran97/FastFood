@@ -1,4 +1,4 @@
-<Mon Ten ="Ice Matcha Latte " Ma_so = "4" Don_gia = "65000" Doanh_thu="325000" So_luong_ton ="15" Tinh_trang="true">
+<Mon Ten ="Ice Matcha Latte " Ma_so = "MT_4" Don_gia = "65000" Doanh_thu="325000" So_luong_ton ="15" Tinh_trang="true">
     <Danh_sach_ban_hang>
         <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>
         <Ban_hang Ngay="2017-3-6" Don_gia="65000" So_luong="2" Tien="130000"/>

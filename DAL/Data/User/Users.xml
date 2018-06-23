@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Staff>
-<Member Id = "NV0001" Name="nguyen van a" Ngaysinh="2018-1-1" User="admin1" Pass="admin1" Diachi="123 vung tau" Sdt="090000001" Level="1"/>
-<Member Id = "NV0002" Name="nguyen van b" Ngaysinh="2018-1-1" User="admin2" Pass="admin2" Diachi="132 vung tau" Sdt="090050001" Level="1"/>
-<Member Id = "NV0003" Name="nguyen van c" Ngaysinh="2018-1-1" User="admin3" Pass="admin3" Diachi="543 vung tau" Sdt="090000001" Level="1"/>
-<Member Id = "NV0004" Name="nguyen van d" Ngaysinh="2018-1-1" User="admin4" Pass="admin4" Diachi="1663 vung tau" Sdt="090004001" Level="1"/>
-<Member Id = "NV0005" Name="nguyen van e" Ngaysinh="2018-1-1" User="admin5" Pass="admin5" Diachi="165 vung tau" Sdt="090000001" Level="1"/>
-<Member Id = "NV0006" Name="nguyen van f" Ngaysinh="2018-1-1" User="admin6" Pass="admin6" Diachi="177 vung tau" Sdt="0900320001" Level="1"/>
+<Member Id = "NV0001" Ten="nguyen van a" Ngay_sinh="2018-1-1" Mat_khau="admin1" Dia_chi="123 vung tau" Sdt="090000001" Chuc_vu="1"/>
+<Member Id = "NV0002" Ten="nguyen van b" Ngay_sinh="2018-1-1" Mat_khau="admin2" Dia_chi="132 vung tau" Sdt="090050001" Chuc_vu="1"/>
+<Member Id = "NV0003" Ten="nguyen van c" Ngay_sinh="2018-1-1" Mat_khau="admin3" Dia_chi="543 vung tau" Sdt="090000001" Chuc_vu="1"/>
+<Member Id = "NV0004" Ten="nguyen van d" Ngay_sinh="2018-1-1" Mat_khau="admin4" Dia_chi="1663 vung tau" Sdt="090004001" Chuc_vu="1"/>
+<Member Id = "NV0005" Ten="nguyen van e" Ngay_sinh="2018-1-1" Mat_khau="admin5" Dia_chi="165 vung tau" Sdt="090000001" Chuc_vu="1"/>
+<Member Id = "NV0006" Ten="nguyen van f" Ngay_sinh="2018-1-1" Mat_khau="admin6" Dia_chi="177 vung tau" Sdt="0900320001" Chuc_vu="1"/>
 </Staff>

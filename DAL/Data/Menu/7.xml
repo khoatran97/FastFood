@@ -1,16 +1,2 @@
-<Mon Ten ="Matcha Frappe" Ma_so = "MT_7" Don_gia = "75000" Doanh_thu="750000" So_luong_ton ="15" Tinh_trang="true">
-    <Danh_sach_ban_hang>
-        <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="75000" So_luong="2" Tien="150000"/>
-    </Danh_sach_ban_hang>
-    <Danh_sach_nhap_hang>
-        <Ban_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="50000" So_luong="5" Tien="250000"/>
-    </Danh_sach_nhap_hang>
+<Mon Ten ="Matcha Frappe" Ma_so = "MT_7" Don_gia = "75000" Doanh_thu="750000" Tinh_trang="true">
 </Mon>

@@ -1,16 +1,2 @@
-<Mon Ten ="Hot Tea" Ma_so = "MT_2" Don_gia = "30000" Doanh_thu="300000" So_luong_ton ="15" Tinh_trang="true">
-    <Danh_sach_ban_hang>
-        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="30000" So_luong="2" Tien="60000"/>
-    </Danh_sach_ban_hang>
-    <Danh_sach_nhap_hang>
-        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
-        <Ban_hang Ngay="2017-3-6" Don_gia="20000" So_luong="5" Tien="100000"/>
-    </Danh_sach_nhap_hang>
+<Mon Ten ="Hot Tea" Ma_so = "MT_2" Don_gia = "30000" Doanh_thu="0" Tinh_trang="true">
 </Mon>

@@ -7,14 +7,14 @@ var dataHandle = require('./dataHandle');
 var port = 3001
 
 app.createServer((req, res) => {
-  
+
     let body='';
     req.on('data', (chunk) => {
         body += chunk.toString();
     }).on('end', () => {
         res.setHeader('Access-Control-Allow-Origin',' *');
 
-      //Check the petition Method
+    //Check the petition Method
     
         console.log(`${req.method} ${req.url}`);
         switch (req.method) {
@@ -63,6 +63,13 @@ app.createServer((req, res) => {
                             res.end(dataHandle.Menu.GetAllInEmplyee());
                         }
                         break;
+                    case '/LogOut':
+                        dataHandle.User.LogOut();
+                        res.writeHead(200, {
+                            'Content-Type': 'text/plain'
+                        });
+                        res.end('Done');
+
                 }
                 break;
             case 'PUT':
@@ -85,10 +92,16 @@ app.createServer((req, res) => {
                             res.end('Fail');
                         })
                         break;
+                    case '/LogIn':
+                        var user = JSON.parse(body);
+                        dataHandle.User.Auth(user.Id, user.Password).then(() => {
+                            res.end('Done');
+                        }).catch((err) => {
+                            res.end('Fail');
+                        })
+                        break;
                 }
                 break;
-
-               
         }
     });
 }).listen(port, (err) => {

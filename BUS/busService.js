@@ -34,23 +34,10 @@ app.createServer((req, res) => {
                         res.end(dataHandle.User.GetAll());
                         break;
                     case '/LoadStore':
-                        app.get('http://localhost:3000/LoadStore', (resp) => {
-                            let data = '';
-                            resp.on('data', (chunk) => {
-                                data += chunk;
-                            });
-                            resp.on('end', () => {
-                                res.writeHead(200, {
-                                    'Content-Type': 'text/xml'
-                                });
-                                res.end(data);
-                            });
-                        }).on("error", (err) => {
-                            res.writeHeader(404, {
-                                'Content-Type': 'text/plain'
-                            })
-                            res.end("Error: " + err.message);
+                        res.writeHead(200, {
+                            'Content-Type': 'text/xml'
                         });
+                        res.end(dataHandle.Store.GetAll());
                         break;
                     case '/LoadMenu':
                         /// ở đây bỏ rồi xuống dưới đi                        
@@ -80,6 +67,7 @@ app.createServer((req, res) => {
                             'Content-Type': 'text/plain'
                         });
                         res.end(dataHandle.User.checkSession(json.Id));
+                        break;
                     case '/LoadBill':
                         if (Role == 2 || Role == 3) {
                             dataHandle.Menu.Update(body).then((result) => {

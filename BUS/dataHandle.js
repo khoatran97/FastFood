@@ -7,27 +7,21 @@ const request = require('request')
 var Data = Cache.CacheData;
 var session = [];
 
-function checkSession(id) {
-    console.log(session);
-    var obj = session.find((obj) => obj.Id === id);
-    /*for (var i = 0; i < session.length; i++) {
-        if (session[i].id === id) {
-            return session[i].role;
-        }
-    }
-    return -1;*/
-
-    if (obj == null || obj == undefined) {
-        return -1;
-    }
-    else {
-        return obj.Role;
-    }
-}
-
 class User {
     constructor() {
         console.log("UserHandle is created");
+    }
+
+    checkSession(id) {
+        console.log(session);
+        var obj = session.find((obj) => obj.Id === id);
+
+        if (obj == null || obj == undefined) {
+            return -1;
+        }
+        else {
+            return obj.Role;
+        }
     }
 
     GetAll() {
@@ -37,17 +31,17 @@ class User {
     Auth(id, password) {
         return new Promise((resolve, reject) => {
             var result = false;
-            if (checkSession(id) !== -1) {
+            if (this.checkSession(id) !== -1) {
                 console.log('The user session had not been deleted yet');
                 resolve(true);
             }
             else {
                 xml2js.Parser().parseString(this.GetAll(), (err, result) => {
                     if (!err) {
-                        var tmp = result.Staff.Member.find((member) => member.$.Id == id && member.$.Mat_khau == password)
+                        var tmp = result.Danh_sach.Nhan_vien.find((member) => member.$.Id == id && member.$.Mat_khau == password)
                         if (tmp != null && tmp != undefined) {
                             var json = JSON.parse(`{"Id": "${tmp.$.Id}", "Role": ${tmp.$.Chuc_vu}}`);
-                            session.push(json)
+                            session.push(json);
                             console.log('Log in successfully');
                             resolve(true);
                         }
@@ -66,12 +60,11 @@ class User {
         });
     }
 
-    async LogOut(id) {
+    async LogOut(body) {
+        var json = JSON.parse(body);
         for (var i = 0; i < session.length; i++) {
-            if (session[i].id === id) {
-                for (var j = i; i < session.length - 1; i++) {
-                    session[j] = session[j+1];
-                }
+            if (session[i].Id == json.UserId) {
+                session.splice(i, 1);
                 console.log('Log out successfully');
             }
         }
@@ -93,29 +86,40 @@ class Menu {
         console.log("MenuHandle is created");
     }
 
+    GetAll(body) {
+        var json = JSON.parse(body);
+        var obj = session.find((obj) => obj.Id === json.UserId);
+        switch (obj.Role) {
+            case 2: 
+                return this.GetAllInCashier();
+                break;
+            default:
+                return this.GetAllInGuest();
+        }
+    }
+
     GetAllInGuest() {
         // tại đây có thay đổi cấu trúc dữ liệu .......
         ///
         var menuItems = [];
         xml2js.Parser().parseString(Data.Menu(), (err, result) =>{
             (result.root.Mon).forEach(item => {
-                
-               // load dữ liệu để hiển thị
-               menuItems.push({'Mon': item.$});
+                // load dữ liệu để hiển thị
+                menuItems.push({'Mon': item.$});
             });
         });
         var builder = new xml2js.Builder();
         return builder.buildObject(menuItems)
     }
 
-    GetAllInEmplyee() {
+    GetAllInCashier() {
         // tại đây có thay đổi cấu trúc dữ liệu .......
         ///
         var menuItems = [];
         xml2js.Parser().parseString(Data.Menu(), (err, result) =>{
             (result.root.Mon).forEach(item => {
-               // load dữ liệu để hiển thị
-               menuItems.push({'Mon': item});
+                // load dữ liệu để hiển thị
+                menuItems.push({'Mon': item});
             });
         });
         var builder = new xml2js.Builder();
@@ -175,6 +179,49 @@ class Menu {
     }
 }
 
+class Bill {
+    constructor() {
+        console.log("MenuHandle is created");
+    }
+
+    Create(jsonInfo) {
+        return new Promise((resolve, reject) =>{
+            var _jsonInfo = JSON.parse(jsonInfo);
+            var options = {
+                uri: "http://localhost:3000/InsertBill",
+                body: jsonInfo,
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+            request(options, (err,data,res) => {
+                if (res == 'Done')
+                    resolve(true);
+            })
+        });
+    }
+
+    Pay(jsonInfo) {
+        return new Promise((resolve, reject) =>{
+            var _jsonInfo = JSON.parse(jsonInfo);
+            var options = {
+                uri: "http://localhost:3000/UpdateBill",
+                body: jsonInfo,
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }
+            request(options, (err,data,res) => {
+                if (res == 'Done')
+                    resolve(true);
+            })
+        });
+    }
+}
+
 module.exports.User = new User();
 module.exports.Store = new Store();
 module.exports.Menu = new Menu();
+module.exports.Bill = new Bill();

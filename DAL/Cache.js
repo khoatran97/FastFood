@@ -7,7 +7,8 @@ module.exports.CacheData = new class Cache {
         this.userCache = this.CacheUser();
         this.storeCache = this.CacheStore();
         this.menuCache = this.CacheMenu();
-        console.log("Cache is created");
+        this.billCache = this.CacheBill();
+        console.log("Caches are created");
     }
 
     CacheUser() {
@@ -20,6 +21,10 @@ module.exports.CacheData = new class Cache {
 
     CacheMenu() {
         return getMethod.loadAllMenuItem();
+    }
+
+    CacheBill() {
+        return getMethod.loadAllBill();
     }
 
     User() {
@@ -49,6 +54,16 @@ module.exports.CacheData = new class Cache {
         }
         else {
             return this.menuCache;
+        }
+    }
+
+    Bill() {
+        if (this.billCache == "" || this.billCache == undefined) {
+            this.billCache = this.CacheBill();
+            return this.billCache;
+        }
+        else {
+            return this.billCache;
         }
     }
 }

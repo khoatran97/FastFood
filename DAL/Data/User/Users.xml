@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Staff>
-<Member Id = "NV0001" Ten="nguyen van a" Ngay_sinh="2018-1-1" Mat_khau="admin1" Dia_chi="123 vung tau" Sdt="090000001" Chuc_vu="1"/>
-<Member Id = "NV0002" Ten="nguyen van b" Ngay_sinh="2018-1-1" Mat_khau="admin2" Dia_chi="132 vung tau" Sdt="090050001" Chuc_vu="1"/>
-<Member Id = "NV0003" Ten="nguyen van c" Ngay_sinh="2018-1-1" Mat_khau="admin3" Dia_chi="543 vung tau" Sdt="090000001" Chuc_vu="1"/>
-<Member Id = "NV0004" Ten="nguyen van d" Ngay_sinh="2018-1-1" Mat_khau="admin4" Dia_chi="1663 vung tau" Sdt="090004001" Chuc_vu="1"/>
-<Member Id = "NV0005" Ten="nguyen van e" Ngay_sinh="2018-1-1" Mat_khau="admin5" Dia_chi="165 vung tau" Sdt="090000001" Chuc_vu="1"/>
-<Member Id = "NV0006" Ten="nguyen van f" Ngay_sinh="2018-1-1" Mat_khau="admin6" Dia_chi="177 vung tau" Sdt="0900320001" Chuc_vu="1"/>
-</Staff>
+<Danh_sach>
+<Nhan_vien Id = "NV0001" Ten="nguyen van a" Ngay_sinh="2018-1-1" Mat_khau="admin1" Dia_chi="123 vung tau" Sdt="090000001" Chuc_vu="1"/>
+<Nhan_vien Id = "NV0002" Ten="nguyen van b" Ngay_sinh="2018-1-1" Mat_khau="admin2" Dia_chi="132 vung tau" Sdt="090050001" Chuc_vu="1"/>
+<Nhan_vien Id = "NV0003" Ten="nguyen van c" Ngay_sinh="2018-1-1" Mat_khau="admin3" Dia_chi="543 vung tau" Sdt="090000001" Chuc_vu="1"/>
+<Nhan_vien Id = "NV0004" Ten="nguyen van d" Ngay_sinh="2018-1-1" Mat_khau="admin4" Dia_chi="1663 vung tau" Sdt="090004001" Chuc_vu="1"/>
+<Nhan_vien Id = "NV0005" Ten="nguyen van e" Ngay_sinh="2018-1-1" Mat_khau="admin5" Dia_chi="165 vung tau" Sdt="090000001" Chuc_vu="1"/>
+<Nhan_vien Id = "NV0006" Ten="nguyen van f" Ngay_sinh="2018-1-1" Mat_khau="admin6" Dia_chi="177 vung tau" Sdt="0900320001" Chuc_vu="1"/>
+</Danh_sach>

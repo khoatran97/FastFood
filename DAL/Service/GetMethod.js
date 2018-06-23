@@ -5,6 +5,7 @@ const xml2js = require('xml2js');
 var menuPath = path.join(__dirname, '/../Data/Menu/');
 var storePath = path.join(__dirname, '/../Data/Store/');
 var userPath = path.join(__dirname, '/../Data/User/');
+var billPath = path.join(__dirname, '/../Data/Bill/');
 
 module.exports.loadAllStore = () => {
     var data = fs.readFileSync(storePath + 'Stores.xml', 'utf-8');
@@ -31,6 +32,25 @@ module.exports.loadAllMenuItem = () => {
 
     var builder = new xml2js.Builder();
     var xml = builder.buildObject(MenuItems)
+    
+    return xml;
+}
+
+module.exports.loadAllBill = () => {
+    var bills = [];
+    fs.readdirSync(billPath).forEach(file => {
+        var filePath = billPath + file;
+        var data = fs.readFileSync(filePath, 'utf-8')
+        var parser = new xml2js.Parser();
+        parser.parseString(data, function (err, result) {
+            if (result != null){
+                bills.push(result);
+            }
+        });
+    });
+
+    var builder = new xml2js.Builder();
+    var xml = builder.buildObject(bills)
     
     return xml;
 }

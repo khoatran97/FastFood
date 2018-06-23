@@ -89,6 +89,10 @@ class Menu {
     GetAll(body) {
         var json = JSON.parse(body);
         var obj = session.find((obj) => obj.Id === json.UserId);
+        if (obj == null || obj == undefined) {
+            return this.GetAllInGuest();
+        }
+
         switch (obj.Role) {
             case 2: 
                 return this.GetAllInCashier();

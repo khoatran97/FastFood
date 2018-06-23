@@ -13,7 +13,7 @@ app.createServer((req, res) => {
         body += chunk.toString();
     }).on('end', () => {
         res.setHeader('Access-Control-Allow-Origin',' *');
-
+        res.setHeader("Content-Type", "application/json;charset=UTF-8");
         var Role = 0;
         if (body != '') {
             var js = JSON.parse(body);
@@ -33,23 +33,25 @@ app.createServer((req, res) => {
                         });
                         res.end(dataHandle.User.GetAll());
                         break;
-                    case '/LoadStore':
+                    case '/LoadStore': 
+                    console.log(body);     
                         res.writeHead(200, {
                             'Content-Type': 'text/xml'
                         });
                         res.end(dataHandle.Store.GetAll());
                         break;
                     case '/LoadMenu':
-                        /// ở đây bỏ rồi xuống dưới đi                        
-                        res.writeHead(200, {
-                            'Content-Type': 'text/xml'
-                        });
+                        /// ở đây bỏ rồi xuống dưới đi   
+                        console.log(body);                     
                         if (body != '') {
+                            res.writeHead(200, {
+                                'Content-Type': 'text/xml'
+                            });
                             res.end(dataHandle.Menu.GetAll(body));
                         }
                         else {
                             res.writeHead(200, {
-                                'Content-Type': 'text/xml'
+                                'Content-Type': 'text/plain'
                             });
                             res.end('Fail');
                         }
@@ -144,6 +146,61 @@ app.createServer((req, res) => {
                         }).catch((err) => {
                             res.end('Fail');
                         })
+                        break;
+                        case '/LoadUser':
+                        res.writeHead(200, {
+                            'Content-Type': 'text/xml'
+                        });
+                        res.end(dataHandle.User.GetAll());
+                        break;
+                    case '/LoadStore': 
+                    console.log(body);     
+                        res.writeHead(200, {
+                            'Content-Type': 'text/xml'
+                        });
+                        res.end(dataHandle.Store.GetAll());
+                        break;
+                    case '/LoadMenu':
+                        /// ở đây bỏ rồi xuống dưới đi   
+                        console.log(body);                     
+                        if (body != '') {
+                            res.writeHead(200, {
+                                'Content-Type': 'text/xml'
+                            });
+                            res.end(dataHandle.Menu.GetAll(body));
+                        }
+                        else {
+                            res.writeHead(200, {
+                                'Content-Type': 'text/plain'
+                            });
+                            res.end('Fail');
+                        }
+                        break;
+                    case '/LogOut':
+                        dataHandle.User.LogOut(body);
+                        res.writeHead(200, {
+                            'Content-Type': 'text/plain'
+                        });
+                        res.end('Done');
+                        break;
+                    case '/Session':
+                        var json = JSON.parse(body);
+                        res.writeHead(200, {
+                            'Content-Type': 'text/plain'
+                        });
+                        res.end(dataHandle.User.checkSession(json.Id));
+                        break;
+                    case '/LoadBill':
+                        if (Role == 2 || Role == 3) {
+                            dataHandle.Menu.Update(body).then((result) => {
+                                res.end('Done');
+                            }).catch((reject) => {
+                                res.end('Fail');
+                            })
+                        }
+                        else {
+                            res.end('No Permission');
+                        }
                         break;
                 }
                 break;

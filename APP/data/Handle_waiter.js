@@ -19,12 +19,7 @@ function Search_Value()
     Hien_Du_lieu(Danh_sach_Kq,false);
 }
 
-
-
-
-
-
-function Hien_Du_lieu(Danh_sach,check) {
+function Hien_Du_lieu(Danh_sach, check) {
     var Du_lieu;
     
     if(check)// nếu dữ liệu được gọi từ Bus về

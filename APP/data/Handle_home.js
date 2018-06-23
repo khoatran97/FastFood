@@ -2,7 +2,6 @@
 var left =false;
 function Hien_Du_lieu(Danh_sach) {
    
-    console.log(Danh_sạch);
     var Du_lieu = new DOMParser().parseFromString(Danh_sach, "text/xml").documentElement;
     var Danh_sach= Du_lieu.getElementsByTagName("Mon");
    

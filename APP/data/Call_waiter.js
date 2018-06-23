@@ -1,3 +1,11 @@
+// Lấy chức vụ của user hiện tại
+var Role = window.Role;
+
+// Kiểm tra xem có quyền truy câp trang hay không
+if (+Role != 1 || Role == null) {
+    window.location.href = "home.html";
+}
+
 function LoadStore() {
     let Xu_ly_HTTP = new XMLHttpRequest();
     Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/LoadStore`, false);

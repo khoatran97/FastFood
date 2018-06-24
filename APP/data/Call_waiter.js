@@ -1,5 +1,5 @@
 // Lấy chức vụ của user hiện tại
-var Role = window.Role;
+var Role = localStorage.getItem("Role");
 
 // Kiểm tra xem có quyền truy câp trang hay không
 if (+Role != 1 || Role == null) {

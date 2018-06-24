@@ -127,10 +127,11 @@ app.createServer((req, res) => {
                         break;
                     case '/Session':
                         var json = JSON.parse(body);
+                        var id = json.UserId;
                         res.writeHead(200, {
                             'Content-Type': 'text/plain'
                         });
-                        res.end(dataHandle.User.checkSession(json.Id));
+                        res.end(`${dataHandle.User.checkSession(json.UserId)}`);
                         break;
                     case '/LoadBill':
                         if (Role == 2 || Role == 3) {

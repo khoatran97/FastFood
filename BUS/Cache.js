@@ -65,6 +65,22 @@ module.exports.CacheData = new class Cache {
         });
     }
 
+    async CacheBill() {
+        return new Promise(function(resolve, reject) {
+            app.get('http://localhost:3000/LoadBill', (resp) => {
+                let data = '';
+                resp.on('data', (chunk) => {
+                    data += chunk;
+                });
+                resp.on('end', () => {
+                    resolve(data);
+                });
+            }).on("error", (err) => {
+                console.log(`CACHE: ${err}`);
+            });
+        });
+    }
+
     User() {
         if (this.userCache == "" || this.userCache == undefined) {
             this.CacheUser().then(result => {
@@ -77,15 +93,15 @@ module.exports.CacheData = new class Cache {
         }
     }
 
-    User() {
-        if (this.userCache == "" || this.userCache == undefined) {
-            this.CacheUser().then(result => {
-                this.userCache = result;
-                return this.userCache;
+    Bill() {
+        if (this.billCache == "" || this.billCache == undefined) {
+            this.CacheBill().then(result => {
+                this.billCache = result;
+                return this.billCache;
             })
         }
         else {
-            return this.userCache;
+            return this.billCache;
         }
     }
 

@@ -14,5 +14,9 @@
 	- Phục vụ (Role = 1): LoadMenu, LoadStore, CreateBill, LogOut
 	- Thu ngân (Role = 2): LoadMenu, LoadStore, LoadBill, PayBill, LogOut
 	- Quản lý (Role = 3): LoadMenu, LoadStore, LoadBill, InsertMenu, UpdateMenu, Logout
-	* LoadBill chưa hoàn thành
 	* Chỉ cần gọi LoadMenu ở BUS sẽ tự xử lý để trả về dữ liệu tướng ứng với Role (0, 1: Lấy thông tin cơ bản; 2, 3: Lấy hết thông tin, bao gồm lịch sử được mua)
+
+# Các kết quả được trả về:
+	- Done: Hoàn thành thao tác
+	- Fail: Thất bại
+	- No Permission: Không có quyền thực hiện thao tác (kiểm tra ở BUS, khác với kiểm ở APP_ở dấu # thứ 3)

@@ -1,3 +1,3 @@
-<Mon Ten="Hot Matcha Latte" Ma_so="MT_1" Don_gia="2222" Doanh_thu="4444" Tinh_trang="false" >
+<Mon Ten="Hot Matcha Latte" Ma_so="1" Don_gia="2222" Doanh_thu="22220" Tinh_trang="false">
     <Lich_su_Ban_hang Ngay="01/01/2018" So_luong="2" Don_gia="2222"/>
-</Mon>
+<Lich_su_Ban_hang Ngay="function now() { [native code] }" So_luong="2" Don_gia="2222"/><Lich_su_Ban_hang Ngay="06/24/2018" So_luong="2" Don_gia="2222"/><Lich_su_Ban_hang Ngay="24/06/2018" So_luong="2" Don_gia="2222"/><Lich_su_Ban_hang Ngay="24/06/2018" So_luong="2" Don_gia="2222"/><Lich_su_Ban_hang Ngay="24/06/2018" So_luong="2" Don_gia="2222"/></Mon>

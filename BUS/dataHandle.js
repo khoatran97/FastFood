@@ -150,8 +150,11 @@ class Menu {
                 }
             }
             request(options, (err,data,res) => {
-                if (res == 'Done')
+                if (res == 'Done') {
+                    Data.CacheMenu();
                     resolve(true);
+                }
+                    
             })
         });
     }
@@ -176,8 +179,10 @@ class Menu {
                 }
             }
             request(options, (err,data,res) => {
-                if (res == 'Done')
+                if (res == 'Done') {
+                    Data.CacheMenu();
                     resolve(true);
+                }
             })
         });
     }
@@ -200,8 +205,11 @@ class Bill {
                 }
             }
             request(options, (err,data,res) => {
-                if (res == 'Done')
+                if (res == 'Done') {
+                    Data.CacheBill();
                     resolve(true);
+                }
+                    
             })
         });
     }
@@ -218,10 +226,16 @@ class Bill {
                 }
             }
             request(options, (err,data,res) => {
-                if (res == 'Done')
+                if (res == 'Done') {
+                    Data.CacheBill();
                     resolve(true);
+                }
             })
         });
+    }
+
+    GetAll() {
+        return Data.Bill();
     }
 }
 

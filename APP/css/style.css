@@ -68,6 +68,7 @@ h1, h2, h3, h4, h5,
     padding-right: 0px;
   }
 }
+  
 
 .site-navbar-light .navbar-nav > .nav-item.site-cta a {
   color: #fff;
@@ -120,6 +121,7 @@ h1, h2, h3, h4, h5,
   margin-top: -130px;
   background: #fff !important;
 }
+/*.site-navbar-light.scrolled > #btnLogin {margin:0;}*/
 
 @media screen and (max-width: 768px) {
   .site-navbar-light.scrolled .navbar-nav {
@@ -154,7 +156,7 @@ h1, h2, h3, h4, h5,
   padding-bottom: 0.7rem !important;
   color: #000 !important;
 }
-
+.site-navbar-light.scrolled #btnLogin { margin-top:0 !important;}
 .site-navbar-light.scrolled .nav-link.active {
   color: #FDA403 !important;
 }

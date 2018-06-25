@@ -17,8 +17,11 @@ app.createServer((req, res) => {
         var Role = 0;
         if (body != '') {
             var js = JSON.parse(body);
+            console.log('----------');
+            console.log(js.UserId);
             var role_tmp = dataHandle.User.checkSession(js.UserId);
             Role = role_tmp == -1 ? 0 : role_tmp;
+            console.log(Role);
         }
         
     //Check the petition Method
@@ -128,12 +131,17 @@ app.createServer((req, res) => {
                     case '/Session':
                         var json = JSON.parse(body);
                         var id = json.UserId;
+                       
                         res.writeHead(200, {
                             'Content-Type': 'text/plain'
                         });
+                        console.log('####IDIDIDI');
+                        console.log('isd :: ' + dataHandle.User.checkSession(json.UserId));
                         res.end(`${dataHandle.User.checkSession(json.UserId)}`);
+
                         break;
                     case '/LoadBill':
+                    console.log('role của tui ::' + Role);
                         if (Role == 2 || Role == 3) {
                             res.writeHead(200, {
                                 'Content-Type': 'text/xml'

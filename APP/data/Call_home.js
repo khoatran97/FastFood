@@ -1,3 +1,5 @@
+
+
 function LoadStore() {
     let Xu_ly_HTTP = new XMLHttpRequest();
     Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/LoadStore`, false);

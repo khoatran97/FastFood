@@ -13,7 +13,9 @@ class User {
     }
 
     checkSession(id) {
-        console.log(session);
+        console.log('session ::'+ session);
+        console.log('$$$$$$$$');
+        console.log('id ::' + id);
         var obj = session.find((obj) => obj.Id === id);
 
         if (obj == null || obj == undefined) {

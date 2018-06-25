@@ -10,7 +10,7 @@ function Search_Value()
     
     var Danh_sach = Chuoi_du_lieu.getElementsByTagName("Mon");
     for (var i = 0; i < Danh_sach.length; i++) {
-      var Mat_hang = Danh_sach[i].getAttribute("Ten");
+      var Mat_hang = Chuoi_du_lieu.getElementsByTagName('Ten')[i].innerHTML;
         console.log(Mat_hang);
       var Ten = Mat_hang.toUpperCase()
       if (Ten.indexOf(Chuoi_Tra_cuu) >= 0) 
@@ -24,7 +24,7 @@ function Hien_Du_lieu(Danh_sach, check) {
     
     if(check)// nếu dữ liệu được gọi từ Bus về
     {
-        Du_lieu = new DOMParser().parseFromString(Danh_sach, "text/xml").documentElement;
+        var Du_lieu = new DOMParser().parseFromString(Danh_sach, "text/xml").documentElement;
         if(Chuoi_du_lieu == null)
              Chuoi_du_lieu = Du_lieu;
     }
@@ -49,7 +49,7 @@ function Hien_Du_lieu(Danh_sach, check) {
       //  console.log(`${aa[i].innerHTML}`);
         var img = document.createElement("img");
         img.setAttribute("class", "mr-3");
-        img.setAttribute("src", "../images/"+Danh_sach[i].getAttribute('Ma_so')+".png");
+        img.setAttribute("src", "../images/"+Du_lieu.getElementsByTagName('Ma_so')[i].innerHTML+".png");
         img.setAttribute("alt", "No Image");
         
         //con tầng 1 : 1.2 div
@@ -59,16 +59,15 @@ function Hien_Du_lieu(Danh_sach, check) {
         // con tầng  1..2 : 1.2.1 h5
         var h5 = document.createElement('h5');
         h5.setAttribute('class','mt-0');
-        h5.innerText = Danh_sach[i].getAttribute('Ten');
+        h5.innerText =Du_lieu.getElementsByTagName('Ten')[i].innerHTML;
 
-        console.log(Danh_sach[i].getAttribute('Ten'));
         // con tầng 1.2  : 1.2.2 p
         //tình trạng còn hàng hay không
 
         //con tầng 1.2 : 1.2.3 h6
         var h6 = document.createElement('h6');
         h6.setAttribute('class','text-primary menu-price');
-        h6.innerText = 'Price: ' + parseInt(Danh_sach[i].getAttribute('Don_gia') ).toLocaleString()  ;
+        h6.innerText = 'Price: ' + parseInt(Du_lieu.getElementsByTagName('Don_gia')[i].innerHTML ).toLocaleString()  ;
 
 
        
@@ -94,9 +93,7 @@ function Hien_Du_lieu(Danh_sach, check) {
 
 // Xự kiển click thẻ
 
-$("#section-contact").click(function(){
-    alert("HTML: ");
-});
+
 
 //Xóa tất cả dữ liệu 
 $('#btnDeleteAll').on('click', function(){
@@ -107,27 +104,30 @@ $('#btnDeleteAll').on('click', function(){
      }
 });
 
+
+
+
+
+
 // Save dữ liệu
 //Xóa tất cả dữ liệu 
 $('#btnSave').on('click', function(){
     var gtable = document.getElementById('table');
     var gbody = gtable.getElementsByTagName('tbody');
-    var chuoi_nhung_ket_qua =[] ;
    
-    console.log(gbody[0].childNodes);
+    var  chuoi_nhung_ket_qua =[];
      if (confirm('Are you sure you want to save this thing into the database?')) {
         gbody[0].childNodes.forEach(element => {
-            var chuoi_ket_qua ='';
-            chuoi_ket_qua +=element.childNodes[0].innerHTML ;
-            chuoi_ket_qua +='|' ;
-            chuoi_ket_qua +=element.childNodes[1].childNodes[0].value ;
-            chuoi_ket_qua +='|' ;
-            chuoi_ket_qua +=element.childNodes[2].innerHTML ;
-            chuoi_ket_qua +='\n';
-            chuoi_nhung_ket_qua.push(chuoi_ket_qua);
-        });
 
-        alert(chuoi_nhung_ket_qua);
+            var chuoi_ket_qua = `{"Id":"${element.childNodes[0].innerHTML}" , "Name":"${element.childNodes[1].innerHTML}","Price":${element.childNodes[3].innerHTML},"Quantity":${element.childNodes[2].childNodes[0].value}}`;
+            //var obj = JSON.parse(chuoi_nhung_ket_qua);
+            chuoi_nhung_ket_qua.push(chuoi_ket_qua);
+            //chuoi_nhung_ket_qua = JSON.stringify(obj);
+          
+        });
+        
+        var result = `{"Items": [${chuoi_nhung_ket_qua.toString()}],"UserId": "${localStorage.getItem("UserId")}"}`;
+        alert(result);
     } else {
         // Do nothing!
     }
@@ -149,20 +149,42 @@ $('#table').on('click','#btnDelete', function(){
 $('#sanpham').on('click', '#btnItem', function(){
 	// alert('msg');
 	// var tr = $(this).parent().parent();
-	var xx ;
+    var xx ;
+    var td0 = $(this).closest('div').closest('div').find('img').attr('src');
+    td0 = td0.split('/')[2];
+    td0 = td0.split('.')[0];
+    
     var td1 = $(this).closest('div').closest('div').closest('div').find('h5').text();
     var td2 = $(this).closest('div').closest('div').closest('div').find('h6').text();
     td2 = td2.split(" ")[1];
+    console.log(td2);
+
 
     // load dữ liệu vào trong table
     var gtable = document.getElementById('table');
     var gbody = gtable.getElementsByTagName('tbody');
-    
+    // nếu tồn tại một mã trước đó thì không làm nữa
+    var check = false;
+    for (let index = 0; index <  gbody[0].childElementCount; index++) {
+       // gbody[0].childNodes[0].innerHTML
+       console.log(gbody[0].childNodes[0].childNodes[0].innerHTML);
+        if( td0 ===  gbody[0].childNodes[index].childNodes[0].innerHTML)
+        {
+            check= true;
+            break;
+        }
+        
+    }
+    if(check)
+        return;
+
     var row  = gbody[0].insertRow(gbody[0].lenght);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
+    var cell0 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+    var cell2 = row.insertCell(2);
+    var cell3 = row.insertCell(3);
+    var cell4 = row.insertCell(4);
+    cell0.innerHTML = td0;
     cell1.innerHTML = td1;
     cell2.innerHTML = '<input type="number" name="quantity" min="1" style="width:50px;" value="1" >';
     cell3.innerHTML = td2;

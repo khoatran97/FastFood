@@ -20,7 +20,10 @@ function getRole() {
     return +(Xu_ly_HTTP.responseText);
 }
 
+
+
 function LogIn() {
+
     var username = document.getElementById('Id').value;
     var password = document.getElementById('Password').value;
 
@@ -32,8 +35,8 @@ function LogIn() {
     Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/LogIn`, false);
     Xu_ly_HTTP.send(str);
     let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
-
     if (Chuoi_Tra_ve == "Done") {
+       
         // Lưu lại thông tin
         localStorage.setItem("UserId", `${username}`);
         localStorage.setItem("Role", `${this.getRole()}`);
@@ -43,11 +46,12 @@ function LogIn() {
         switch (+(role)) {
             case 1:
                 // Chuyển về trang nhân viên phục vụ
-                window.location.href = "waiter.html"
+                window.location.href='waiter.html'
+                //document.location.hash = 'home.html';
                 break;
             case 2:
                 // Chuyển về trang nhân viên thu ngân
-                window.location.href = "cashier.html"
+                window.location.href ='cashier.html'
                 break;
             case 3:
                 // Chuyển về trang quản lý
@@ -56,11 +60,12 @@ function LogIn() {
         }
     }
     else {
-        //
+        alert('dang nhap sai ');
     }
 }
 
 function LogOut() {
+    alert('reset login');
     let Xu_ly_HTTP = new XMLHttpRequest();
     // Tạo chuỗi JSON
     var str = `{"UserId": ${this.UserId}}`;

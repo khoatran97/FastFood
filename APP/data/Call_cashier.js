@@ -37,5 +37,6 @@ function LoadBill(){
     console.log('ket qua LoadBill ::' + Chuoi_Tra_ve);
     return Chuoi_Tra_ve;
 
-
 }
+
+

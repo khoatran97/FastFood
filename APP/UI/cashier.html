@@ -25,7 +25,11 @@
     <link rel="stylesheet" href="../css/style.css">
     
      <!-- InstanceBeginEditable name="head" -->
-   
+   <style>
+   table .collapse.in {
+	display:table-row;
+}
+   </style>
     <!-- InstanceEndEditable -->
   </head>
   <body data-spy="scroll" data-target="#site-navbar" data-offset="200">
@@ -61,7 +65,7 @@
     <div class="container mainmain site-section" id="section-infomation">
     <div class="row" >
     <div class="col-12">
-    <table class="table table-hover"  id='table'>
+    <!-- <table class="table table-hover"  id='table'>
     <thead>
       <tr>
         <th>Id Order</th>
@@ -71,8 +75,17 @@
       </tr>
     </thead>
     <tbody></tbody>
-  </table>
+  </table> -->
     
+    
+    <table class="table table-responsive table-hover" id='table'>
+  <thead>
+        <tr><th><i class="fa fa-table"></i></th><th>ID Order</th><th>Day</th><th>Cost</th><th>Pay</th></tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
     </div> <!-- end col-12 -->
     </div> <!-- end row -->
     </div> <!-- end container  mainmain -->
@@ -230,7 +243,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="../data/Client.js"></script>
 <script>
     LoadStore();
-    LoadBill();
+    Hien_Du_lieu( LoadBill());
 </script>
   <!-- InstanceEndEditable -->
   <!-- Extension-->

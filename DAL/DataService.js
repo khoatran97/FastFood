@@ -131,7 +131,7 @@ app.createServer((req, res) => {
                     case '/InsertBill':
                         postMethod.InsertBill(body).then((result) => {
                             Data.CacheBill();
-                            res.end("Done");
+                            res.end(`${result}`);
                         }).catch((err) => {
                             res.end("Fail");
                         })

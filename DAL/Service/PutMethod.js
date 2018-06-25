@@ -47,7 +47,7 @@ module.exports.UpdateBill = (jsonInfo) => {
         item.setAttribute("Tinh_trang", "true");
         var updatedItem = XMLSerializer.serializeToString(item);
 
-        fs.writeFile(filePath, updatedItem, "utf8", (err) => {
+        fs.writeFileSync(filePath, updatedItem, "utf8", (err) => {
             if (err) {
                 reject(err);
             }

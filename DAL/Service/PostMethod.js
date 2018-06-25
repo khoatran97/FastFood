@@ -99,7 +99,7 @@ module.exports.InsertBill = (jsonInfo) => {
             fs.writeFileSync(filePath, xml, "utf8");
             
             console.log(`Inserted successfully`);
-            resolve(true);
+            resolve(Id);
         });
     })
 }

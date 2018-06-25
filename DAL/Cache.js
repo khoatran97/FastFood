@@ -12,19 +12,27 @@ module.exports.CacheData = new class Cache {
     }
 
     CacheUser() {
-        return getMethod.loadAllUser();
+        var users = getMethod.loadAllUser();
+        this.userCache = users;
+        return users;
     }
 
     CacheStore() {
-        return getMethod.loadAllStore();
+        var stores = getMethod.loadAllStore();
+        this.storeCache = stores;
+        return stores;
     }
 
     CacheMenu() {
-        return getMethod.loadAllMenuItem();
+        var items = getMethod.loadAllMenuItem();
+        this.menuCache = items;
+        return items;
     }
 
     CacheBill() {
-        return getMethod.loadAllBill();
+        var bills = getMethod.loadAllBill();
+        this.billCache = bills;
+        return bills;
     }
 
     User() {

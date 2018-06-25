@@ -14,6 +14,10 @@ module.exports.CacheData = new class Cache {
             this.menuCache = result;
             return this.menuCache;
         })
+        this.CacheBill().then(result => {
+            this.billCache = result;
+            return this.billCache;
+        })
         console.log("Cache is created");
     }
 
@@ -33,7 +37,7 @@ module.exports.CacheData = new class Cache {
         });
     }
 
-    async CacheStore() {
+    CacheStore() {
         return new Promise(function(resolve, reject) {
             app.get('http://localhost:3000/LoadStore', (resp) => {
                 let data = '';
@@ -49,7 +53,7 @@ module.exports.CacheData = new class Cache {
         });
     }
 
-    async CacheMenu() {
+    CacheMenu() {
         return new Promise(function(resolve, reject) {
             app.get('http://localhost:3000/LoadMenu', (resp) => {
                 let data = '';
@@ -65,7 +69,7 @@ module.exports.CacheData = new class Cache {
         });
     }
 
-    async CacheBill() {
+    CacheBill() {
         return new Promise(function(resolve, reject) {
             app.get('http://localhost:3000/LoadBill', (resp) => {
                 let data = '';

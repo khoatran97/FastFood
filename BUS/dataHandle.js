@@ -153,10 +153,11 @@ class Menu {
             }
             request(options, (err,data,res) => {
                 if (res == 'Done') {
-                    Data.CacheMenu();
-                    resolve(true);
+                    Data.CacheMenu().then((result) => {
+                        Data.menuCache = result;
+                        resolve(true);
+                    })
                 }
-                    
             })
         });
     }
@@ -182,8 +183,10 @@ class Menu {
             }
             request(options, (err,data,res) => {
                 if (res == 'Done') {
-                    Data.CacheMenu();
-                    resolve(true);
+                    Data.CacheMenu().then((result) => {
+                        Data.menuCache = result;
+                        resolve(true);
+                    })
                 }
             })
         });
@@ -207,9 +210,11 @@ class Bill {
                 }
             }
             request(options, (err,data,res) => {
-                if (res == 'Done') {
-                    Data.CacheBill();
-                    resolve(true);
+                if (res != 'Fail') {
+                    Data.CacheBill().then((result) => {
+                        Data.billCache = result;
+                        resolve(`${res}`);
+                    })
                 }
                     
             })
@@ -229,8 +234,10 @@ class Bill {
             }
             request(options, (err,data,res) => {
                 if (res == 'Done') {
-                    Data.CacheBill();
-                    resolve(true);
+                    Data.CacheBill().then((result) => {
+                        Data.billCache = result;
+                        resolve(true);
+                    })
                 }
             })
         });

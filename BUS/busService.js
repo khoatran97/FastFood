@@ -32,32 +32,7 @@ app.createServer((req, res) => {
                 res.end('Do not use GET method');
                 break;
             case 'PUT':
-                switch (req.url) {
-                    case '/UpdateMenu':
-                        if (Role == 3) {
-                            dataHandle.Menu.Update(body).then((result) => {
-                                res.end('Done');
-                            }).catch((reject) => {
-                                res.end('Fail');
-                            })
-                        }
-                        else {
-                            res.end('No Permission');
-                        }
-                        break;
-                    case '/PayBill':
-                        if (Role == 2) {
-                            dataHandle.Bill.Pay(body).then((result) => {
-                                res.end('Done');
-                            }).catch((reject) => {
-                                res.end('Fail');
-                            })
-                        }
-                        else {
-                            res.end('No Permission');
-                        }
-                        break;
-                }
+                res.end('Do not use PUT method');
                 break;
             case 'POST':
                 console.log(Role);
@@ -77,7 +52,7 @@ app.createServer((req, res) => {
                     case '/CreateBill':
                         if (Role == 1) {
                             dataHandle.Bill.Create(body).then((result) => {
-                                res.end('Done');
+                                res.end(`${result}`);
                             }).catch((reject) => {
                                 res.end('Fail');
                             })
@@ -148,6 +123,30 @@ app.createServer((req, res) => {
                             });
                             res.end(dataHandle.Bill.GetAll());
                             break;
+                        }
+                        else {
+                            res.end('No Permission');
+                        }
+                        break;
+                        case '/UpdateMenu':
+                        if (Role == 3) {
+                            dataHandle.Menu.Update(body).then((result) => {
+                                res.end('Done');
+                            }).catch((reject) => {
+                                res.end('Fail');
+                            })
+                        }
+                        else {
+                            res.end('No Permission');
+                        }
+                        break;
+                    case '/PayBill':
+                        if (Role == 2) {
+                            dataHandle.Bill.Pay(body).then((result) => {
+                                res.end('Done');
+                            }).catch((reject) => {
+                                res.end('Fail');
+                            })
                         }
                         else {
                             res.end('No Permission');

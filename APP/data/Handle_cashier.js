@@ -128,10 +128,17 @@ $('#table').on('click', '#btnDelete', function () {
 $('#table').on('click', '#btnPay', function () {
     var td1 = $(this).closest('tr').find('td:eq(1)').text();
     var result =`{"Id":${td1} ,"UserId":"${localStorage.getItem("UserId")}"}`;
-    alert('lỗi nằm ở đây... trong file Handle_Cashier.js dòng 128');
     let Xu_ly_HTTP = new XMLHttpRequest();
-    Xu_ly_HTTP.open( "PUT", 'http://localhost:3001' + `/PayBill`,false);
-  
-    Xu_ly_HTTP.send(JSON.stringify({"Id": td1},{"UserId":`${localStorage.getItem("UserId")}`}));
+    Xu_ly_HTTP.open("POST" , 'http://localhost:3001' + `/PayBill`,false);
+
+    Xu_ly_HTTP.send(result);
     let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
+
+    if (Chuoi_Tra_ve == "Done") {
+        alert("Pay successfully");
+        window.location.reload();
+    }
+    else {
+        alert("Pay unsuccessfully");
+    }
 });

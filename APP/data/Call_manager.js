@@ -2,7 +2,7 @@
 var Role = localStorage.getItem("Role");
 
 // Kiểm tra xem có quyền truy câp trang hay không
-if (+Role != 1 || Role == null) {
+if (+Role != 3 || Role == null) {
    
     window.location.href = "home.html";
 }

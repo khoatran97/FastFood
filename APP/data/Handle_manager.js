@@ -19,8 +19,8 @@ function Search_Value() {
 
 
 
-function Hien_Du_lieu(Danh_sach,check) {
-   
+function Hien_Du_lieu(Danh_sach, check) {
+
     var Du_lieu;
 
     if (check) // nếu dữ liệu được gọi từ Bus về
@@ -33,19 +33,19 @@ function Hien_Du_lieu(Danh_sach,check) {
         Du_lieu = Danh_sach;
     }
 
-    var Danh_sach= Du_lieu.getElementsByTagName("Mon");
-   
-    var div =[];
+    var Danh_sach = Du_lieu.getElementsByTagName("Mon");
 
-    for (var i = 0; i<Danh_sach.length; i++) {
-        
+    var div = [];
+
+    for (var i = 0; i < Danh_sach.length; i++) {
+
         var tr_parent = document.createElement('tr');
         // con của tr_parent
         //sub 1.1
         var image = document.createElement('Image');
-        image.setAttribute('src', '../images/' + Du_lieu.getElementsByTagName('Ma_so')[i].innerHTML+".png");
-        image.setAttribute('class','pl-5');
-        image.setAttribute('style','height:200px');
+        image.setAttribute('src', '../images/' + Du_lieu.getElementsByTagName('Ma_so')[i].innerHTML + ".png");
+        image.setAttribute('class', 'pl-5');
+        image.setAttribute('style', 'height:200px');
         var td_1 = document.createElement('td');
         td_1.appendChild(image);
         //sub 1.2
@@ -63,10 +63,17 @@ function Hien_Du_lieu(Danh_sach,check) {
         td_5.innerHTML = Du_lieu.getElementsByTagName('Tinh_trang')[i].innerHTML;
         //sub 1.6
         var button1 = document.createElement('button');
-        button1.setAttribute('id', 'btnStop')
-        button1.setAttribute('type', 'button');
-        button1.setAttribute('class', ' btn btn-danger');
-        button1.innerHTML = 'Stop';
+        if (td_5.innerHTML == 'true') {
+            button1.setAttribute('id', 'btnStop')
+            button1.setAttribute('type', 'button');
+            button1.setAttribute('class', ' btn btn-danger');
+            button1.innerHTML = 'Ngừng bán';
+        } else {
+            button1.setAttribute('id', 'btnStart')
+            button1.setAttribute('type', 'button');
+            button1.setAttribute('class', ' btn btn-success');
+            button1.innerHTML = 'Bán lại';
+        }
         var td_6 = document.createElement('td');
         td_6.setAttribute('class', 'p-0');
         td_6.appendChild(button1);
@@ -75,7 +82,7 @@ function Hien_Du_lieu(Danh_sach,check) {
         button2.setAttribute('id', 'btnEdit')
         button2.setAttribute('type', 'button');
         button2.setAttribute('class', ' btn btn-info');
-        button2.innerHTML = 'Edit';
+        button2.innerHTML = 'Sửa giá';
         var td_7 = document.createElement('td');
         td_7.setAttribute('class', 'p-0');
         td_7.appendChild(button2);
@@ -85,60 +92,77 @@ function Hien_Du_lieu(Danh_sach,check) {
         tr_parent.appendChild(td_2);
         tr_parent.appendChild(td_3);
         tr_parent.appendChild(td_4);
-       // tr_parent.appendChild(td_5);
+        // tr_parent.appendChild(td_5);
         tr_parent.appendChild(td_6);
         tr_parent.appendChild(td_7);
-        if (td_5.innerHTML == 'true')// chỉ hiển thị những hóa đơn có tình trạng là true : còn cung cấp
-        {
-            div += (tr_parent.outerHTML);
-        }
+        
+        div += (tr_parent.outerHTML);
     }
     document.getElementById("tbody").innerHTML = div;
 }
 
 // stop không bán hàng nữa
-$('#table').on('click','#btnStop',function(){
-var td_id = $(this).closest('tr').find('td:eq(1)').text();
-var td_price = $(this).closest('tr').find('td:eq(3)').text();
+$('#table').on('click', '#btnStop', function () {
+    var td_id = $(this).closest('tr').find('td:eq(1)').text();
+    var td_price = $(this).closest('tr').find('td:eq(3)').text();
 
-var result =`{"Id":${td_id} ,"Price":${td_price},"Status": false,"UserId":"${localStorage.getItem("UserId")}"}`;
-let Xu_ly_HTTP = new XMLHttpRequest();
-Xu_ly_HTTP.open("POST" , 'http://localhost:3001' + `/UpdateMenu`,false);
+    var result = `{"Id": "${td_id}" ,"Price":${td_price},"Status": false,"UserId":"${localStorage.getItem("UserId")}"}`;
+    let Xu_ly_HTTP = new XMLHttpRequest();
+    Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/UpdateMenu`, false);
 
-Xu_ly_HTTP.send(result);
-let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
+    Xu_ly_HTTP.send(result);
+    let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
 
-if (Chuoi_Tra_ve == "Done") {
-    alert("Update successfully");
-    window.location.reload();
-}
-else {
-    alert("Update unsuccessfully");
-}
+    if (Chuoi_Tra_ve == "Done") {
+        alert("Đã ngừng bán món này");
+        window.location.reload();
+    } else {
+        alert("Không thể thực hiện việc ngừng bán");
+    }
+});
+
+// bán lại
+$('#table').on('click', '#btnStart', function () {
+    var td_id = $(this).closest('tr').find('td:eq(1)').text();
+    var td_price = $(this).closest('tr').find('td:eq(3)').text();
+
+    var result = `{"Id": "${td_id}", "Price": ${td_price}, "Status": true, "UserId": "${localStorage.getItem("UserId")}"}`;
+    let Xu_ly_HTTP = new XMLHttpRequest();
+    Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/UpdateMenu`, false);
+
+    Xu_ly_HTTP.send(result);
+    let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
+
+    if (Chuoi_Tra_ve == "Done") {
+        alert("Mặt hàng đã được bán lại");
+        window.location.reload();
+    } else {
+        alert("Không thể bán lại mặt hàng này");
+    }
 });
 
 // edit  hàng thay đổi giá tiền
-$('#table').on('click','#btnEdit',function(){
+$('#table').on('click', '#btnEdit', function () {
 
     var td_id = $(this).closest('tr').find('td:eq(1)').text();
     var td_price = $(this).closest('tr').find('td:eq(3)').text();
-    var change = prompt(`Giá cũ : ${td_price} \nGiá mới : ` ,'');
-   
-    if(!$.isNumeric(change))
+    var change = prompt(`Giá cũ : ${td_price} \nGiá mới : `, '');
+
+    if (!$.isNumeric(change))
         alert('Không nhận chuỗi kí tự');
-   
-        var result =`{"Id":${td_id} ,"Price":${change},"Status": true,"UserId":"${localStorage.getItem("UserId")}"}`;
+    else {
+        var result = `{"Id":${td_id} ,"Price":${change},"Status": true,"UserId":"${localStorage.getItem("UserId")}"}`;
         let Xu_ly_HTTP = new XMLHttpRequest();
-        Xu_ly_HTTP.open("POST" , 'http://localhost:3001' + `/UpdateMenu`,false);
-    
+        Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/UpdateMenu`, false);
+
         Xu_ly_HTTP.send(result);
         let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
-    
+
         if (Chuoi_Tra_ve == "Done") {
-            alert("Update successfully");
+            alert("Cập nhật giá thành công");
             window.location.reload();
+        } else {
+            alert("Cạp nhật giá thất bại");
         }
-        else {
-            alert("Update unsuccessfully");
-        }
-   });
+    }
+});

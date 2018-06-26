@@ -13,6 +13,8 @@ module.exports.UpdateMenuItem = (jsonInfo) => {
     return new Promise((resolve, reject) => {
         jsonInfo = JSON.parse(jsonInfo);
 
+        console.log(jsonInfo);
+
         var filePath = menuPath + `${jsonInfo.Id}.xml`;
         var data = fs.readFileSync(filePath, 'utf-8')
 
@@ -26,7 +28,7 @@ module.exports.UpdateMenuItem = (jsonInfo) => {
         }
         var updatedItem = XMLSerializer.serializeToString(item);
 
-        fs.writeFile(filePath, updatedItem, "utf8", (err) => {
+        fs.writeFileSync(filePath, updatedItem, "utf8", (err) => {
             if (err) {
                 reject(err);
             }

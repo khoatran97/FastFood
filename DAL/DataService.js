@@ -89,17 +89,13 @@ app.createServer((req, res) => {
             req.on('end', () => {
                 switch (req.url) {
                     case '/UpdateMenu':
-                        req.on('data', chunk => {
-                            body += chunk.toString();
-                        });
-                        req.on('end', () => {
-                            putMethod.UpdateMenuItem(body).then((result) => {
-                                Data.CacheMenu();
-                                res.end("Done");
-                            }).catch((err) => {
-                                res.end("Fail");
-                            })
-                        });
+                        putMethod.UpdateMenuItem(body).then((result) => {
+                            Data.CacheMenu();
+                            Data.CacheMenu();
+                            res.end("Done");
+                        }).catch((err) => {
+                            res.end("Fail");
+                        })
                         break;
                     case '/UpdateBill':
                         putMethod.UpdateBill(body).then((result) => {

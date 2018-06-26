@@ -17,7 +17,7 @@ function Hien_Du_lieu(Danh_sach) {
         var img = document.createElement("img");
         img.setAttribute("class", "mr-3");
         img.setAttribute("src", "../images/"+Du_lieu.getElementsByTagName('Ma_so')[i].innerHTML+".png");
-        img.setAttribute("alt", "No Image");
+        img.setAttribute("alt", "Không có ảnh");
         
         //con tầng 1 : 1.2 div
         var div2  =document.createElement('div');
@@ -33,7 +33,7 @@ function Hien_Du_lieu(Danh_sach) {
         //con tầng 1.2 : 1.2.3 h6
         var h6 = document.createElement('h6');
         h6.setAttribute('class','text-primary menu-price');
-        h6.innerText = 'Price :  ' + parseInt(Du_lieu.getElementsByTagName('Don_gia')[i].innerHTML ).toLocaleString()  ;
+        h6.innerText = 'Giá :  ' + parseInt(Du_lieu.getElementsByTagName('Don_gia')[i].innerHTML ).toLocaleString()  ;
 
 
        

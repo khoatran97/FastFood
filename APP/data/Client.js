@@ -21,7 +21,7 @@ function getRole() {
 }
 //<li class="nav-item"> <a class="btn btn-secondary btn-block mt-3" id="btnLogin"  href="login.html" >Đăng Nhập</a></li>
 function LoadUserId(){
-    var hello =`Hello,  ${localStorage.getItem('UserId')}`;
+    var hello =`Xin chào,  ${localStorage.getItem('UserId')}`;
    if(localStorage.getItem('UserId') != null)
    {
     // hidden login
@@ -83,26 +83,26 @@ function LogIn() {
         }
     }
     else {
-        alert('dang nhap sai ');
+        alert('Thông tin đăng nhập không hợp lệ');
     }
 }
 
 function LogOut() {
     
-    if (confirm('Are you sure to logout?')) {
+    if (confirm('Bạn có muốn đăng xuất?')) {
         let Xu_ly_HTTP = new XMLHttpRequest();
-    // Tạo chuỗi JSON
-    // Gửi request
-    Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/LogOut`, false);
-    Xu_ly_HTTP.send( JSON.stringify({"UserId": `${localStorage.getItem('UserId')}`}));
-    let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
+        // Tạo chuỗi JSON
+        // Gửi request
+        Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/LogOut`, false);
+        Xu_ly_HTTP.send( JSON.stringify({"UserId": `${localStorage.getItem('UserId')}`}));
+        let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
 
-    if (Chuoi_Tra_ve == "Done") {
-        // Xoá thông tin -> trả về trạng thái khách
-        localStorage.clear();
-        LoadUserId();
-        window.location.reload();
-    }
+        if (Chuoi_Tra_ve == "Done") {
+            // Xoá thông tin -> trả về trạng thái khách
+            localStorage.clear();
+            LoadUserId();
+            window.location.reload();
+        }
 
     } else {
         // Do nothing!

@@ -14,25 +14,24 @@
 <body>
 <div class="container p-5">
         <div style="width:500px;" class="m-auto">
-            <h1 class="text-center login-title">Sign in to continue to Bootsnipp</h1>
+            <h1 class="text-center login-title">Đăng nhập vào hệ thống</h1>
             <div class="account-wall">
                 <img class="profile-img"  src="../images/login.png"
                     alt="">
                 <form class="form-signin">
-                <input id="Id" type="text" class="form-control" placeholder="Email" required autofocus>
-                <input id="Password" type="password" class="form-control" placeholder="Password" required>
+                <input id="Id" type="text" class="form-control" placeholder="Mã nhân viên" required autofocus>
+                <input id="Password" type="password" class="form-control" placeholder="Mật khẩu" required>
                 <!-- <button class="btn btn-lg btn-primary btn-block" id='btnLogin' onclick="LogIn()">
                     Sign in</button> -->
                     <button type="button" class="btn btn-lg btn-primary btn-block" onclick="LogIn()" >
-                        Sign in</button>
+                        Đăng nhập</button>
                 <label class="checkbox pull-left">
                     <input type="checkbox" value="remember-me">
-                    Remember me
+                    Ghi nhớ đăng nhập
                 </label>
-                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                <a href="#" class="pull-right need-help">Trợ giúp? </a><span class="clearfix"></span>
                 </form>
             </div>
-            <a href="#" class="text-center new-account">Create an account </a>
     </div>
 </div>
 
@@ -42,5 +41,19 @@
 
 
 <script type="text/javascript" src="../data/Client.js"></script>
+<script>
+    var role = getRole();
+    switch (role) {
+        case 1:
+            window.location.href = "../UI/waiter.html";
+            break;
+        case 2:
+            window.location.href = "../UI/cashier.html";
+            break;
+        case 3:
+            window.location.href = "../UI/manager.html";
+            break;
+}
+</script>
 </body>
 </html>

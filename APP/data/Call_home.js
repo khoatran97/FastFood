@@ -1,4 +1,15 @@
-
+var role = getRole();
+switch (role) {
+    case 1:
+        window.location.href = "../UI/waiter.html";
+        break;
+    case 2:
+        window.location.href = "../UI/cashier.html";
+        break;
+    case 3:
+        window.location.href = "../UI/manager.html";
+        break;
+}
 
 function LoadStore() {
     let Xu_ly_HTTP = new XMLHttpRequest();

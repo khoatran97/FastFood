@@ -22,6 +22,7 @@ app.createServer((req, res) => {
             var role_tmp = dataHandle.User.checkSession(js.UserId);
             Role = role_tmp == -1 ? 0 : role_tmp;
             console.log(Role);
+            console.log(body);
         }
         
     //Check the petition Method

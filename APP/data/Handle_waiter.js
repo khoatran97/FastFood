@@ -105,7 +105,7 @@ $('#btnSave').on('click', function () {
     var gbody = gtable.getElementsByTagName('tbody');
 
     var chuoi_nhung_ket_qua = [];
-    if (confirm('Are you sure to order?')) {
+    if (confirm('Bạn có muốn hoàn thành phiếu đặt món này?')) {
         gbody[0].childNodes.forEach(element => {
 
             var chuoi_ket_qua = `{"Id":"${element.childNodes[0].innerHTML}" , "Name":"${element.childNodes[1].innerHTML}","Price":${element.childNodes[3].innerHTML},"Quantity":${element.childNodes[2].childNodes[0].value}}`;
@@ -123,10 +123,10 @@ $('#btnSave').on('click', function () {
         let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
 
         if (Chuoi_Tra_ve != "Fail") {
-            alert(`Order successfully. Your bill number: No.${Chuoi_Tra_ve}`);
+            alert(`Gọi món thành công. Mã số phiếu đặt món: No.${Chuoi_Tra_ve}`);
         }
         else {
-            alert('Order unsuccessfully. Please try again!');
+            alert('Đặt món thất bại');
         }
 
     } else {

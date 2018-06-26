@@ -1,6 +1,6 @@
 
 // Lấy chức vụ của user hiện tại
-var Role = localStorage.getItem("Role");
+var Role = getRole();
 var UserId = localStorage.getItem('UserId');
 // Kiểm tra xem có quyền truy câp trang hay không
 // số 2 này tương ứng với role == 2 của user trong CSDL

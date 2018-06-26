@@ -58,7 +58,7 @@ function Hien_Du_lieu(Danh_sach) {
         button.setAttribute('id', 'btnPay')
         button.setAttribute('type', 'button');
         button.setAttribute('class', 'fa fa-money fa-2x btn btn-info');
-        button.innerHTML = 'Pay$';
+        button.innerHTML = 'Thanh toán';
         var td_6 = document.createElement('td');
         td_6.setAttribute('type', 'vertical-align:auto;');
         td_6.setAttribute('class', 'p-0');
@@ -135,10 +135,10 @@ $('#table').on('click', '#btnPay', function () {
     let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
 
     if (Chuoi_Tra_ve == "Done") {
-        alert("Pay successfully");
+        alert("Thanh toán thành công");
         window.location.reload();
     }
     else {
-        alert("Pay unsuccessfully");
+        alert("Thanh toán thất bại");
     }
 });

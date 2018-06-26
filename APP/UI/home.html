@@ -43,8 +43,8 @@
             <li class="nav-item"><a href="#section-about" class="nav-link">About</a></li>
             <li class="nav-item"><a href="#section-menu" class="nav-link">Menu</a></li>
             <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
-            <li class="nav-item"> <a class="btn btn-secondary btn-block mt-3" id="btnLogin"  href="login.html" >Đăng Nhập</a></li>
-            
+            <li class="nav-item" id="Parent_Login"> <a class="btn btn-secondary btn-block mt-3" id="btnLogin"  href="login.html" >Đăng Nhập</a></li>
+            <li class="nav-item d-none" id="Parent_Logout"> <a class="btn btn-secondary btn-block mt-3" id="btnLogout" onclick="LogOut()"   >Đăng Xuất</a></li>
           </ul>
         </div>
        
@@ -57,8 +57,8 @@
         <div class="row align-items-center justify-content-center text-center site-vh-100">
           <div class="col-md-12">
             <h1 class="site-heading site-animate mb-3">Welcome To EatWell</h1>
-            <h2 class="h5 site-subheading mb-5 site-animate">Come and eat well with our delicious &amp; healthy foods.</h2>    
-            <p><a href="https://colorlib.com/" target="_blank" class="btn btn-outline-white btn-lg site-animate" data-toggle="modal" data-target="#reservationModal">Reservation</a></p>
+            <h2 class="h5 site-subheading mb-5 site-animate">ĐẠI HỌC KHOA HỌC TỰ NHIÊN - Công nghệ XML &amp; Ứng dụng.</h2> 
+            
           </div>
         </div>
       </div>
@@ -69,11 +69,14 @@
         <div class="container">
           <div class="row">
           <h2 style="width:100%;display:block;" >Welcome</h2>
-           <div class="col-md-6 site-animate img" data-animate-effect="fadeInRight">
-              <img style="height:500px; width:500px;" src="../images/info1.jpg" alt="Free Template by colorlib.com" class="img-fluid">
+           <div  class="col-md-6 site-animate img" data-animate-effect="fadeInRight">
+              <img style="height:500px; width:500px; position: relative;" src="../images/info1.jpg" alt="Free Template by colorlib.com" class="img-fluid">
+              <p  style="font-family: Arial, Helvetica, sans-serif; color:white; position: absolute; bottom: 1px; font-weight: bold; ; left: 30px; "><span style="font-size: 30px;">Đinh Văn Tuấn Hải</span> <br /> <span style="font-size: 20px;" >MSSV:1512137</span></p>
+            
             </div>
             <div class="col-md-6 site-animate img" data-animate-effect="fadeInRight">
-              <img style="height:500px; width:500px;" src="../images/info2.jpg" alt="Free Template by colorlib.com" class="img-fluid">
+              <img style="height:500px; width:500px; position: relative;" src="../images/info2.jpg" alt="Free Template by colorlib.com" class="img-fluid">
+              <p  style="font-family: Arial, Helvetica, sans-serif; color:white; position: absolute; bottom: 1px; font-weight: bold; ; right: 75px; text-align: right; "><span style="font-size: 30px;">Nguyễn Hữu Khoa</span> <br /> <span style="font-size: 20px;" >MSSV:?????</span></p>
             </div>
             
           </div>
@@ -269,6 +272,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="../data/Handle_home.js"></script>
     <script src="../data/Client.js"></script>
     <script>
+        LoadUserId();
         LoadStore();
         Hien_Du_lieu(LoadMenu());
     </script>

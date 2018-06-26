@@ -19,6 +19,29 @@ function getRole() {
     // 3: Quản lý
     return +(Xu_ly_HTTP.responseText);
 }
+//<li class="nav-item"> <a class="btn btn-secondary btn-block mt-3" id="btnLogin"  href="login.html" >Đăng Nhập</a></li>
+function LoadUserId(){
+    var hello =`Hello,  ${localStorage.getItem('UserId')}`;
+   if(localStorage.getItem('UserId') != null)
+   {
+    // hidden login
+    document.getElementById('Parent_Login').setAttribute('class',' nav-item d-none');
+    // show logout
+    document.getElementById('Parent_Logout').setAttribute('class','nav-item');
+    document.getElementById('btnLogout').innerHTML = hello;
+    
+   }
+   else
+   {
+       // show login
+    document.getElementById('Parent_Login').setAttribute('class',' nav-item ');
+    // hidden logout
+    document.getElementById('Parent_Logout').setAttribute('class','nav-item d-none');
+    
+   }
+  
+}
+
 
 
 
@@ -65,20 +88,25 @@ function LogIn() {
 }
 
 function LogOut() {
-    alert('reset login');
-    let Xu_ly_HTTP = new XMLHttpRequest();
+    
+    if (confirm('Are you sure to logout?')) {
+        let Xu_ly_HTTP = new XMLHttpRequest();
     // Tạo chuỗi JSON
-    var str = `{"UserId": ${this.UserId}}`;
-    var json = JSON.parse(str);
-
     // Gửi request
     Xu_ly_HTTP.open("POST", 'http://localhost:3001' + `/LogOut`, false);
-    Xu_ly_HTTP.send(json);
+    Xu_ly_HTTP.send( JSON.stringify({"UserId": `${localStorage.getItem('UserId')}`}));
     let Chuoi_Tra_ve = Xu_ly_HTTP.responseText;
 
     if (Chuoi_Tra_ve == "Done") {
         // Xoá thông tin -> trả về trạng thái khách
-        localStorage.setItem("UserId", "");
-        localStorage.setItem("Role", "0");
+        localStorage.clear();
+        LoadUserId();
+        window.location.reload();
     }
+
+    } else {
+        // Do nothing!
+    }
+
+    
 }

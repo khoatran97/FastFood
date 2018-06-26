@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5,
   color: #000 !important;
 }
 .site-navbar-light.scrolled #btnLogin { margin-top:0 !important;}
+.site-navbar-light.scrolled #btnLogout { margin-top:0 !important;}
 .site-navbar-light.scrolled .nav-link.active {
   color: #FDA403 !important;
 }

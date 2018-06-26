@@ -39,6 +39,8 @@
             <li class="nav-item"><a href="#section-infomation" class="nav-link">Infomation</a></li>
            
             <li class="nav-item"><a href="#section-contact" class="nav-link">Contact</a></li>
+            <li class="nav-item" id="Parent_Login"> <a class="btn btn-secondary btn-block mt-3" id="btnLogin"  href="login.html" >Đăng Nhập</a></li>
+            <li class="nav-item d-none" id="Parent_Logout"> <a class="btn btn-secondary btn-block mt-3" id="btnLogout" onclick="LogOut()"   >Đăng Xuất</a></li>
           </ul>
         </div>
       </div>
@@ -50,7 +52,7 @@
         <div class="row align-items-center justify-content-center text-center site-vh-100">
           <div class="col-md-12">
             <h1 class="site-heading site-animate mb-3">Welcome To EatWell</h1>
-            <h2 class="h5 site-subheading mb-5 site-animate">Come and eat well with our delicious &amp; healthy foods.</h2>    
+            <h2 class="h5 site-subheading mb-5 site-animate">ĐẠI HỌC KHOA HỌC TỰ NHIÊN - Công nghệ XML &amp; Ứng dụng.</h2> 
             
           </div>
         </div>
@@ -256,7 +258,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- Load Data -->
 <script src="../data/Call_waiter.js"></script> 
 <script src="../data/Handle_waiter.js"></script>
+<script src="../data/Client.js"></script>
 <script>
+    LoadUserId();
     LoadStore();
     Hien_Du_lieu(LoadMenu(), true);
 </script>
